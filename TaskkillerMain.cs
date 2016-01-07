@@ -47,16 +47,6 @@ namespace Taskkiller
                 }
                 firstStart = true;
                 MessageBox.Show(strings.MsgBox_FirstStart_Text, strings.MsgBox_FirstStart_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //if not, try to create it
-                try
-                {
-                    Directory.CreateDirectory(dataPath);
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(strings.MsgBox_Error_TKiller_Data + e.Message, strings.MsgBox_Error_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ExitProgram();
-                }
                 ShowConfigForm();
             }
             else
