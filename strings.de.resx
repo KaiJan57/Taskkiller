@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MsgBox_ConfigDelete_Text" xml:space="preserve">
+    <value>Der Datenordner mit der Konfiguration von Taskkiller wird GELÖSCHT!
+Drücke "Ja", um fortzufahren oder "Nein", um abzubrechen.</value>
+  </data>
+  <data name="MsgBox_ConfigDelete_Title" xml:space="preserve">
+    <value>Warnung!</value>
+  </data>
+  <data name="MsgBox_Error_FileDelete" xml:space="preserve">
+    <value>Die Datei konnte nicht gelöscht werden. Genauere Informationen: </value>
+  </data>
+  <data name="MsgBox_Error_FileToShow_NotExisting" xml:space="preserve">
+    <value>Die anzuzeigende Datei existiert nicht.</value>
+  </data>
+  <data name="MsgBox_Error_ReadConfigFile" xml:space="preserve">
+    <value>Taskkiller konnte seine Konfigurationsdatei nicht einlesen.
+Taskkiller wird nun beendet. Genauere Informationen: </value>
+  </data>
+  <data name="MsgBox_Error_Title" xml:space="preserve">
+    <value>Fehler!</value>
+  </data>
+  <data name="MsgBox_Error_TKiller_Data" xml:space="preserve">
+    <value>Taskkiller konnte sein Datenverzeichnis nicht erstellen.
+Taskkiller wird nun beendet. Genauere Informationen: </value>
+  </data>
+  <data name="MsgBox_Error_WriteConfigFile" xml:space="preserve">
+    <value>Taskkiller konnte seine Konfigurationsdatei nicht schreiben.
+Taskkiller wird nun beendet. Genauere Informationen: </value>
+  </data>
+  <data name="MsgBox_ExecutableDelete_Text" xml:space="preserve">
+    <value>Es sieht so aus, als möchtest du Taskkiller deinstallieren. Drücke "Ja", um Taskkiller komplett zu löschen oder "Nein", um abzubrechen.</value>
+  </data>
+  <data name="MsgBox_ExecutableDelete_Title" xml:space="preserve">
+    <value>Taskkiller löschen?</value>
+  </data>
+  <data name="MsgBox_FirstStart_Text" xml:space="preserve">
+    <value>Du hast Taskkiller zum ersten Mal gestartet.
+Du solltest die Konfiguration starten.</value>
+  </data>
+  <data name="MsgBox_FirstStart_Title" xml:space="preserve">
+    <value>Wilkommen bei Taskkiller!</value>
+  </data>
+  <data name="MsgBox_NoInput_Text" xml:space="preserve">
+    <value>Du hast keinen Prozessnamen zum Hinzufügen oder Ändern angegeben.</value>
+  </data>
+  <data name="MsgBox_NoInput_Title" xml:space="preserve">
+    <value>Keine Eingabe!</value>
+  </data>
+  <data name="MsgBox_NoSelection_Text" xml:space="preserve">
+    <value>Du hast keinen Prozessnamen in der Liste zum Entfernen ausgewählt.</value>
+  </data>
+  <data name="MsgBox_NoSelection_Title" xml:space="preserve">
+    <value>Keine Selektion!</value>
+  </data>
+  <data name="MsgBox_Question_Abort_Text" xml:space="preserve">
+    <value>Bist du dir sicher, dass du abbrechen willst? Deine Änderungen werden nicht gespeichert!</value>
+  </data>
+  <data name="MsgBox_Question_Abort_Title" xml:space="preserve">
+    <value>Abbrechen?</value>
+  </data>
+  <data name="MsgBox_Question_Exit_Text" xml:space="preserve">
+    <value>Bist du dir sicher, dass du Taskkiller beenden willst? Deine Änderungen werden nicht gespeichert.</value>
+  </data>
+  <data name="MsgBox_Question_Exit_Title" xml:space="preserve">
+    <value>Beenden?</value>
+  </data>
+  <data name="MsgBox_Question_NoTasks_Text" xml:space="preserve">
+    <value>Du hast keine Prozesse eingegeben. Möchtest du Taskkiller beenden?</value>
+  </data>
+  <data name="MsgBox_Question_NoTasks_Title" xml:space="preserve">
+    <value>Es gibt nichts zu tun!</value>
+  </data>
+  <data name="MsgBox_Error_CD" xml:space="preserve">
+    <value>Der Datenordner konnte nicht erstellt werden.
+Taskkiller wird nun beendet. Genauere Informationen: </value>
+  </data>
+  <data name="String_Abort" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="String_AddEdit" xml:space="preserve">
+    <value>Hinzufügen/Bearbeiten</value>
+  </data>
+  <data name="String_AddedProcesses" xml:space="preserve">
+    <value>Hinzugefügte Prozesse</value>
+  </data>
+  <data name="String_AutoLang" xml:space="preserve">
+    <value>Automatische Sprache</value>
+  </data>
+  <data name="String_ChooseLang" xml:space="preserve">
+    <value>Sprache auswählen:</value>
+  </data>
+  <data name="String_Config" xml:space="preserve">
+    <value>Konfigurieren</value>
+  </data>
+  <data name="String_Configuration" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="String_DeleteData" xml:space="preserve">
+    <value>Datenordner löschen</value>
+  </data>
+  <data name="String_EndAfter" xml:space="preserve">
+    <value>Beende es nach:</value>
+  </data>
+  <data name="String_Exit" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <data name="String_KillCompletely" xml:space="preserve">
+    <value>Prozess komplett beenden</value>
+  </data>
+  <data name="String_Other" xml:space="preserve">
+    <value>Sonstiges</value>
+  </data>
+  <data name="String_Process" xml:space="preserve">
+    <value>Prozess:</value>
+  </data>
+  <data name="String_Program" xml:space="preserve">
+    <value>Programm</value>
+  </data>
+  <data name="String_Remove" xml:space="preserve">
+    <value>Entfernen</value>
+  </data>
+  <data name="String_Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="String_SelectRemove" xml:space="preserve">
+    <value>Wähle eine Zelle aus und drücke "Entfernen"</value>
+  </data>
+  <data name="String_ShowInExplorer" xml:space="preserve">
+    <value>Datei im Explorer anzeigen</value>
+  </data>
+  <data name="String_Title" xml:space="preserve">
+    <value>Taskkiller Konfiguration</value>
+  </data>
+  <data name="String_XMLOptions" xml:space="preserve">
+    <value>XML-Optionen</value>
+  </data>
+  <data name="MsgBox_Troll_0" xml:space="preserve">
+    <value>Möchten Sie dieses Programm starten? Es könnte eventuell gefährliche Viren enthalten!</value>
+  </data>
+  <data name="MsgBox_Troll_DontFeelLike" xml:space="preserve">
+    <value>Kein Bock :-P</value>
+  </data>
+</root>
