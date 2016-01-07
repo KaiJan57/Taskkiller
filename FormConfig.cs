@@ -326,9 +326,8 @@ namespace Taskkiller
                         var Process = new Process();
                         Process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         Process.StartInfo.FileName = "cmd.exe";
-                        //give cmd command: wait 1 second, delete noprompt
-                        //Process.StartInfo.Arguments = "/C taskkill /F /IM \"" + Application.ExecutablePath.Split('\\')[Application.ExecutablePath.Split('\\').Length - 1] + "\" & ping 1.1.1.1 -n 1 -w 3000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\"";
-                        Process.StartInfo.Arguments = "/C ping 1.1.1.1 -n 1 -w 1000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\"";
+                        //give cmd command: wait 1 second, delete noprompt, delete localization folder noprompt
+                        Process.StartInfo.Arguments = "/C ping 1.1.1.1 -n 1 -w 1000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\" & rmdir /S /Q \"" + Application.StartupPath + "\\de\"";
                         Process.Start();
                         Taskkiller.Program.MainContext.ExitProgram();
                     }
