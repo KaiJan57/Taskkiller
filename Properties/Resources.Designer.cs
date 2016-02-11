@@ -69,5 +69,15 @@ namespace Taskkiller.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        /// </summary>
+        internal static System.Drawing.Icon Transparent {
+            get {
+                object obj = ResourceManager.GetObject("Transparent", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

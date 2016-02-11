@@ -57,6 +57,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonResetXML = new System.Windows.Forms.Button();
             this.buttonShow = new System.Windows.Forms.Button();
+            this.checkBoxHideIcon = new System.Windows.Forms.CheckBox();
             this.Program.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Time)).BeginInit();
@@ -87,7 +88,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // configurationToolStripMenuItem
@@ -115,7 +116,7 @@
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(431, 257);
+            this.buttonSave.Location = new System.Drawing.Point(431, 315);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 1;
@@ -125,7 +126,7 @@
             // buttonAbort
             // 
             this.buttonAbort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAbort.Location = new System.Drawing.Point(350, 257);
+            this.buttonAbort.Location = new System.Drawing.Point(350, 315);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(75, 23);
             this.buttonAbort.TabIndex = 2;
@@ -271,7 +272,7 @@
             this.groupBox2.Location = new System.Drawing.Point(13, 152);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(297, 83);
+            this.groupBox2.Size = new System.Drawing.Size(297, 117);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -283,7 +284,7 @@
             this.ProcessList.FormattingEnabled = true;
             this.ProcessList.Location = new System.Drawing.Point(6, 19);
             this.ProcessList.Name = "ProcessList";
-            this.ProcessList.Size = new System.Drawing.Size(285, 49);
+            this.ProcessList.Size = new System.Drawing.Size(285, 79);
             this.ProcessList.TabIndex = 0;
             this.ProcessList.SelectedIndexChanged += new System.EventHandler(this.ProcessList_SelectedIndexChanged);
             this.ProcessList.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ProcessList_KeyUp);
@@ -292,19 +293,20 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.checkBoxHideIcon);
             this.groupBox3.Controls.Add(this.TrollMode);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.LanguageBox);
-            this.groupBox3.Location = new System.Drawing.Point(12, 241);
+            this.groupBox3.Location = new System.Drawing.Point(12, 275);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(332, 39);
+            this.groupBox3.Size = new System.Drawing.Size(332, 63);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
             // TrollMode
             // 
             this.TrollMode.AutoSize = true;
-            this.TrollMode.Location = new System.Drawing.Point(11, 19);
+            this.TrollMode.Location = new System.Drawing.Point(6, 14);
             this.TrollMode.Name = "TrollMode";
             this.TrollMode.Size = new System.Drawing.Size(73, 17);
             this.TrollMode.TabIndex = 0;
@@ -314,7 +316,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 20);
+            this.label5.Location = new System.Drawing.Point(85, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 2;
@@ -328,7 +330,7 @@
             "Automatic Language",
             "English",
             "Deutsch"});
-            this.LanguageBox.Location = new System.Drawing.Point(197, 17);
+            this.LanguageBox.Location = new System.Drawing.Point(200, 12);
             this.LanguageBox.Name = "LanguageBox";
             this.LanguageBox.Size = new System.Drawing.Size(126, 21);
             this.LanguageBox.TabIndex = 1;
@@ -342,7 +344,7 @@
             this.groupBox4.Controls.Add(this.buttonShow);
             this.groupBox4.Location = new System.Drawing.Point(316, 152);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(195, 83);
+            this.groupBox4.Size = new System.Drawing.Size(195, 117);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             // 
@@ -368,11 +370,21 @@
             this.buttonShow.UseVisualStyleBackColor = true;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
+            // checkBoxHideIcon
+            // 
+            this.checkBoxHideIcon.AutoSize = true;
+            this.checkBoxHideIcon.Location = new System.Drawing.Point(6, 37);
+            this.checkBoxHideIcon.Name = "checkBoxHideIcon";
+            this.checkBoxHideIcon.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxHideIcon.TabIndex = 3;
+            this.checkBoxHideIcon.UseVisualStyleBackColor = true;
+            this.checkBoxHideIcon.CheckedChanged += new System.EventHandler(this.checkBoxHideIcon_CheckedChanged);
+            // 
             // FormConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 292);
+            this.ClientSize = new System.Drawing.Size(518, 350);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -431,5 +443,6 @@
         private System.Windows.Forms.Button buttonShow;
         public System.Windows.Forms.ComboBox LanguageBox;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.CheckBox checkBoxHideIcon;
     }
 }

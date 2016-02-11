@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.Threading;
 using System.Xml;
@@ -11,11 +10,13 @@ namespace Taskkiller
 {
     public partial class TaskkillerMain : ApplicationContext
     {
-        public static string dataPath = Application.StartupPath + "\\Taskkiller_Data";
-        public static string configFile = dataPath + "\\Settings.xml";
+        public static string dataPath = Application.StartupPath + Path.DirectorySeparatorChar + "Taskkiller_Data";
+        public static string configFile = dataPath + Path.DirectorySeparatorChar + "Settings.xml";
         public static bool firstStart = false;
         public int LanguageMode = 0;
         public bool TrollMode = false;
+        public bool HideIcon = false;
+        public bool hiddenmsgshown = false;
         public List<string> ProcessNames = new List<string>();
         public List<int> TimeList = new List<int>();
         public List<bool> KillCompletely = new List<bool>();
@@ -125,9 +126,14 @@ namespace Taskkiller
                 foreach (XmlNode node in nodeList)
                 {
                     this.TrollMode = bool.Parse(node.SelectSingleNode("TrollMode").InnerText);
+                    this.HideIcon = bool.Parse(node.SelectSingleNode("HideIcon").InnerText);
                     LanguageMode = int.Parse(node.SelectSingleNode("Language").InnerText);
                 }
                 ApplyConfig();
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show(strings.MsgBox_Error_ReadConfigFile1, strings.MsgBox_Error_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception e)
             {
@@ -138,6 +144,7 @@ namespace Taskkiller
 
         private void ApplyConfig()
         {
+            FormConfig.HideIcon(HideIcon);
             switch (LanguageMode)
             {
                 case 0:
@@ -208,6 +215,9 @@ namespace Taskkiller
                 writer.WriteStartElement("TrollMode");
                 writer.WriteValue(configForm.TrollMode.Checked);
                 writer.WriteEndElement();
+                writer.WriteStartElement("HideIcon");
+                writer.WriteValue(configForm.checkBoxHideIcon.Checked);
+                writer.WriteEndElement();
                 writer.WriteStartElement("Language");
                 writer.WriteValue(configForm.LanguageBox.SelectedIndex);
                 writer.WriteEndElement();
@@ -275,7 +285,7 @@ namespace Taskkiller
                 configForm.Dispose();
                 configForm = null;
             }
-            System.Environment.Exit(0);
+            Environment.Exit(0);
         }
     }
 }

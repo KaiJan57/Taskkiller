@@ -71,7 +71,7 @@ namespace Taskkiller
 
         #endregion
 
-        private System.Windows.Forms.NotifyIcon TaskkillerIcon;
+        public System.Windows.Forms.NotifyIcon TaskkillerIcon;
         private System.Windows.Forms.ContextMenuStrip TaskkillerIconMenu;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;

@@ -43,6 +43,7 @@ namespace Taskkiller
                     }
                 }
                 this.TrollMode.Checked = Taskkiller.Program.MainContext.TrollMode;
+                this.checkBoxHideIcon.Checked = Taskkiller.Program.MainContext.HideIcon;
                 this.LanguageBox.SelectedIndex = Taskkiller.Program.MainContext.LanguageMode;
                 if (ProcessList.Items.Count > 0)
                 {
@@ -77,7 +78,8 @@ namespace Taskkiller
             this.buttonShow.Text = strings.String_ShowInExplorer;
             this.label5.Text = strings.String_ChooseLang;
             this.Text = strings.String_Title;
-            this.LanguageBox.Items[0] = Taskkiller.strings.String_AutoLang;
+            this.checkBoxHideIcon.Text = strings.String_HideIcon;
+            this.LanguageBox.Items[0] = strings.String_AutoLang;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -271,7 +273,7 @@ namespace Taskkiller
         {
             try
             {
-                System.Diagnostics.Process.Start("explorer.exe", string.Format("/select,\"{0}\"", TaskkillerMain.configFile));
+                Process.Start("explorer.exe", string.Format("/select,\"{0}\"", TaskkillerMain.configFile));
             }
             catch
             {
@@ -336,6 +338,34 @@ namespace Taskkiller
                 {
                     MessageBox.Show(strings.MsgBox_Error_FileDelete + ex.Message, strings.MsgBox_Error_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void checkBoxHideIcon_CheckedChanged(object sender, EventArgs e)
+        {
+            HideIcon(checkBoxHideIcon.Checked);
+        }
+
+        public static void HideIcon(bool hide)
+        {
+            if (hide)
+            {
+                //Hide Icon (Set Icon as transparent) and show message
+                Taskkiller.Program.MainContext.TaskkillerIcon.Icon = Properties.Resources.Transparent;
+                Taskkiller.Program.MainContext.TaskkillerIcon.Text = "";
+                if(!Taskkiller.Program.MainContext.hiddenmsgshown)
+                {
+                    Taskkiller.Program.MainContext.TaskkillerIcon.ShowBalloonTip(2000, "Taskkiller", strings.String_Hello, ToolTipIcon.Info);
+                }
+                Taskkiller.Program.MainContext.hiddenmsgshown = true;
+            }
+            else
+            {
+                //Show Icon
+                Taskkiller.Program.MainContext.hiddenmsgshown = false;
+                Taskkiller.Program.MainContext.TaskkillerIcon.Text = "Taskkiller";
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(TaskkillerMain));
+                Taskkiller.Program.MainContext.TaskkillerIcon.Icon = ((Icon)(resources.GetObject("TrayIco.Icon")));
             }
         }
     }

@@ -258,4 +258,13 @@ Taskkiller wird nun beendet. Genauere Informationen: </value>
   <data name="MsgBox_Troll_DontFeelLike" xml:space="preserve">
     <value>Kein Bock :-P</value>
   </data>
+  <data name="MsgBox_Error_ReadConfigFile1" xml:space="preserve">
+    <value>Die Konfiguration war nicht komplett. Egal.</value>
+  </data>
+  <data name="String_Hello" xml:space="preserve">
+    <value>Hallo, ich bin jetzt hier!</value>
+  </data>
+  <data name="String_HideIcon" xml:space="preserve">
+    <value>Symbol in der Taskleiste verstecken</value>
+  </data>
 </root>

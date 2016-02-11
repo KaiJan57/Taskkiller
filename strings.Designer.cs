@@ -118,6 +118,15 @@ namespace Taskkiller {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The configuration was not complete. Ignoring. ähnelt.
+        /// </summary>
+        internal static string MsgBox_Error_ReadConfigFile1 {
+            get {
+                return ResourceManager.GetString("MsgBox_Error_ReadConfigFile1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Error! ähnelt.
         /// </summary>
         internal static string MsgBox_Error_Title {
@@ -380,6 +389,24 @@ namespace Taskkiller {
         internal static string String_Exit {
             get {
                 return ResourceManager.GetString("String_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hi, I&apos;m here now! ähnelt.
+        /// </summary>
+        internal static string String_Hello {
+            get {
+                return ResourceManager.GetString("String_Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hide Icon in Taskbar ähnelt.
+        /// </summary>
+        internal static string String_HideIcon {
+            get {
+                return ResourceManager.GetString("String_HideIcon", resourceCulture);
             }
         }
         

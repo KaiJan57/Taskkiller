@@ -260,4 +260,13 @@ Taskkiller will exit now. More information: </value>
   <data name="MsgBox_Troll_DontFeelLike" xml:space="preserve">
     <value>Don't feel like :-P</value>
   </data>
+  <data name="MsgBox_Error_ReadConfigFile1" xml:space="preserve">
+    <value>The configuration was not complete. Ignoring.</value>
+  </data>
+  <data name="String_Hello" xml:space="preserve">
+    <value>Hi, I'm here now!</value>
+  </data>
+  <data name="String_HideIcon" xml:space="preserve">
+    <value>Hide Icon in Taskbar</value>
+  </data>
 </root>
