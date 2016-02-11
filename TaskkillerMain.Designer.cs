@@ -40,7 +40,7 @@ namespace Taskkiller
             // 
             // TaskkillerIcon
             // 
-            this.TaskkillerIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("TrayIco.Icon")));
+            this.TaskkillerIcon.Icon = Properties.Resources.Appico;
             this.TaskkillerIcon.ContextMenuStrip = this.TaskkillerIconMenu;
             this.TaskkillerIcon.Text = "Taskkiller";
             this.TaskkillerIcon.Visible = true;

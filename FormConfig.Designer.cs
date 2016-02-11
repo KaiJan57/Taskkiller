@@ -393,7 +393,7 @@
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.Program);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = Properties.Resources.Appico;
             this.MainMenuStrip = this.Program;
             this.MinimumSize = new System.Drawing.Size(534, 330);
             this.Name = "FormConfig";

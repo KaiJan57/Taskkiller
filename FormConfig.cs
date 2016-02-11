@@ -364,8 +364,7 @@ namespace Taskkiller
                 //Show Icon
                 Taskkiller.Program.MainContext.hiddenmsgshown = false;
                 Taskkiller.Program.MainContext.TaskkillerIcon.Text = "Taskkiller";
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(TaskkillerMain));
-                Taskkiller.Program.MainContext.TaskkillerIcon.Icon = ((Icon)(resources.GetObject("TrayIco.Icon")));
+                Taskkiller.Program.MainContext.TaskkillerIcon.Icon = Properties.Resources.Appico;
             }
         }
     }
