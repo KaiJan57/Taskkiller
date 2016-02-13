@@ -142,43 +142,12 @@ namespace Taskkiller
             }
         }
 
-        private void ApplyConfig()
-        {
-            FormConfig.HideIcon(HideIcon);
-            switch (LanguageMode)
-            {
-                case 0:
-                    {
-                        UpdateLanguage("auto");
-                        break;
-                    }
-                case 1:
-                    {
-                        UpdateLanguage("en");
-                        break;
-                    }
-                case 2:
-                    {
-                        UpdateLanguage("de");
-                        break;
-                    }
-            }
-            KillAllThreads();
-            foreach (string s in ProcessNames)
-            {
-                KillThreads.Add(new KillThread(KillCompletely[ProcessNames.IndexOf(s)], TrollMode, s.Substring(0, s.Length - 4), TimeList[ProcessNames.IndexOf(s)]));
-            }
-            foreach (KillThread k in KillThreads)
-            {
-                k.Start();
-            }
-        }
-
         private void SaveConfig()
         {
             //Write everything into local vars
             this.TimeList = configForm.TimeList;
             this.TrollMode = configForm.TrollMode.Checked;
+            this.HideIcon = configForm.checkBoxHideIcon.Checked;
             this.LanguageMode = configForm.LanguageBox.SelectedIndex;
             //Clear everything up to prevent double items
             this.ProcessNames.Clear();
@@ -229,6 +198,38 @@ namespace Taskkiller
             {
                 MessageBox.Show(strings.MsgBox_Error_WriteConfigFile + e.Message, strings.MsgBox_Error_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ExitProgram();
+            }
+        }
+
+        private void ApplyConfig()
+        {
+            FormConfig.HideIcon(HideIcon);
+            switch (LanguageMode)
+            {
+                case 0:
+                    {
+                        UpdateLanguage("auto");
+                        break;
+                    }
+                case 1:
+                    {
+                        UpdateLanguage("en");
+                        break;
+                    }
+                case 2:
+                    {
+                        UpdateLanguage("de");
+                        break;
+                    }
+            }
+            KillAllThreads();
+            foreach (string s in ProcessNames)
+            {
+                KillThreads.Add(new KillThread(KillCompletely[ProcessNames.IndexOf(s)], TrollMode, s.Substring(0, s.Length - 4), TimeList[ProcessNames.IndexOf(s)]));
+            }
+            foreach (KillThread k in KillThreads)
+            {
+                k.Start();
             }
         }
 

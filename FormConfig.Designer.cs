@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfig));
             this.Program = new System.Windows.Forms.MenuStrip();
             this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,13 +50,13 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ProcessList = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxHideIcon = new System.Windows.Forms.CheckBox();
             this.TrollMode = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonResetXML = new System.Windows.Forms.Button();
             this.buttonShow = new System.Windows.Forms.Button();
-            this.checkBoxHideIcon = new System.Windows.Forms.CheckBox();
             this.Program.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Time)).BeginInit();
@@ -303,6 +302,15 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
+            // checkBoxHideIcon
+            // 
+            this.checkBoxHideIcon.AutoSize = true;
+            this.checkBoxHideIcon.Location = new System.Drawing.Point(6, 37);
+            this.checkBoxHideIcon.Name = "checkBoxHideIcon";
+            this.checkBoxHideIcon.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxHideIcon.TabIndex = 3;
+            this.checkBoxHideIcon.UseVisualStyleBackColor = true;
+            // 
             // TrollMode
             // 
             this.TrollMode.AutoSize = true;
@@ -370,16 +378,6 @@
             this.buttonShow.UseVisualStyleBackColor = true;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
-            // checkBoxHideIcon
-            // 
-            this.checkBoxHideIcon.AutoSize = true;
-            this.checkBoxHideIcon.Location = new System.Drawing.Point(6, 37);
-            this.checkBoxHideIcon.Name = "checkBoxHideIcon";
-            this.checkBoxHideIcon.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxHideIcon.TabIndex = 3;
-            this.checkBoxHideIcon.UseVisualStyleBackColor = true;
-            this.checkBoxHideIcon.CheckedChanged += new System.EventHandler(this.checkBoxHideIcon_CheckedChanged);
-            // 
             // FormConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,7 +391,7 @@
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.Program);
-            this.Icon = Properties.Resources.Appico;
+            this.Icon = global::Taskkiller.Properties.Resources.Appico;
             this.MainMenuStrip = this.Program;
             this.MinimumSize = new System.Drawing.Size(534, 330);
             this.Name = "FormConfig";

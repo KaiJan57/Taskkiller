@@ -341,11 +341,6 @@ namespace Taskkiller
             }
         }
 
-        private void checkBoxHideIcon_CheckedChanged(object sender, EventArgs e)
-        {
-            HideIcon(checkBoxHideIcon.Checked);
-        }
-
         public static void HideIcon(bool hide)
         {
             if (hide)
