@@ -52,6 +52,7 @@ namespace Taskkiller
             this.configToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.TaskkillerIconMenu.Name = "TaskkillerIconMenu";
+            this.TaskkillerIconMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.TaskkillerIconMenu.Size = new System.Drawing.Size(153, 70);
             // 
             // exitToolStripMenuItem
