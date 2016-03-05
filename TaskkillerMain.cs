@@ -59,10 +59,9 @@ namespace Taskkiller
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //To prevent data loss caused by user
-            if (configForm != null)
+            if (configForm != null && MessageBox.Show(strings.MsgBox_Question_Exit_Text, strings.MsgBox_Question_Exit_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
-                configForm.Close();
+                return;
             }
             ExitProgram();
         }
@@ -89,10 +88,6 @@ namespace Taskkiller
                     this.SaveConfig();
                     //and apply the settings
                     this.ApplyConfig();
-                }
-                if (result == DialogResult.Abort)
-                {
-
                 }
                 //destroy the object to know later if the ConfigForm is open
                 configForm = null;
@@ -281,7 +276,8 @@ namespace Taskkiller
             //Close Form
             if (configForm != null)
             {
-                configForm.showExitWarning = false;
+                //Don't show warning
+                configForm.DialogResult = DialogResult.OK;
                 configForm.Close();
                 configForm.Dispose();
                 configForm = null;

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
@@ -10,7 +7,6 @@ namespace Taskkiller
 {
     public partial class FormConfig : Form
     {
-        public bool showExitWarning = true;
         public List<int> TimeList = new List<int>();
         private int LastIndex = 0;
 
@@ -111,7 +107,6 @@ namespace Taskkiller
 
         private void SaveConfig()
         {
-            showExitWarning = false;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -122,7 +117,6 @@ namespace Taskkiller
             {
                return;
             }
-            showExitWarning = false;
             this.DialogResult = DialogResult.Abort;
             this.Close();
         }
@@ -247,13 +241,9 @@ namespace Taskkiller
 
         private void FormConfig_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //check the reason why the form is closing
-            if (this.showExitWarning)
+            if (DialogResult != DialogResult.OK && DialogResult != DialogResult.Abort && MessageBox.Show(strings.MsgBox_Question_Exit_Text, strings.MsgBox_Question_Exit_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
-                if (MessageBox.Show(strings.MsgBox_Question_Exit_Text, strings.MsgBox_Question_Exit_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
+                e.Cancel = true;
             }
         }
 
@@ -321,8 +311,8 @@ namespace Taskkiller
                     System.IO.Directory.Delete(TaskkillerMain.dataPath);
                     if (MessageBox.Show(strings.MsgBox_ExecutableDelete_Text, strings.MsgBox_ExecutableDelete_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        showExitWarning = false;
                         //Just to prevent crashes on exit
+                        DialogResult = DialogResult.OK;
                         this.Close();
                         this.Dispose();
                         var Process = new Process();
