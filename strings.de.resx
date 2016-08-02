@@ -202,7 +202,7 @@ Taskkiller wird nun beendet. Genauere Informationen: </value>
     <value>Hinzugefügte Prozesse</value>
   </data>
   <data name="String_AutoLang" xml:space="preserve">
-    <value>Automatische Sprache</value>
+    <value>Automatisch auswählen</value>
   </data>
   <data name="String_ChooseLang" xml:space="preserve">
     <value>Sprache auswählen:</value>

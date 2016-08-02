@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 using System.Xml;
-using System.Globalization;
 
 namespace Taskkiller
 {
@@ -85,9 +85,9 @@ namespace Taskkiller
                     //now if it was firststart, now it isnt anymore
                     firstStart = false;
                     //if it was, save everything
-                    this.SaveConfig();
+                    SaveConfig();
                     //and apply the settings
-                    this.ApplyConfig();
+                    ApplyConfig();
                 }
                 //destroy the object to know later if the ConfigForm is open
                 configForm = null;
@@ -113,20 +113,20 @@ namespace Taskkiller
                 XmlNodeList nodeList = settings.DocumentElement.SelectNodes("/Taskkiller_Settings/Process");
                 foreach (XmlNode node in nodeList)
                 {
-                    this.ProcessNames.Add(node.SelectSingleNode("Name").InnerText);
-                    this.KillCompletely.Add(bool.Parse(node.SelectSingleNode("KillCompletely").InnerText));
-                    this.TimeList.Add(int.Parse(node.SelectSingleNode("Delay").InnerText));
+                    ProcessNames.Add(node.SelectSingleNode("Name").InnerText);
+                    KillCompletely.Add(bool.Parse(node.SelectSingleNode("KillCompletely").InnerText));
+                    TimeList.Add(int.Parse(node.SelectSingleNode("Delay").InnerText));
                 }
                 nodeList = settings.DocumentElement.SelectNodes("/Taskkiller_Settings");
                 foreach (XmlNode node in nodeList)
                 {
-                    this.TrollMode = bool.Parse(node.SelectSingleNode("TrollMode").InnerText);
-                    this.HideIcon = bool.Parse(node.SelectSingleNode("HideIcon").InnerText);
+                    TrollMode = bool.Parse(node.SelectSingleNode("TrollMode").InnerText);
+                    HideIcon = bool.Parse(node.SelectSingleNode("HideIcon").InnerText);
                     LanguageMode = int.Parse(node.SelectSingleNode("Language").InnerText);
                 }
                 ApplyConfig();
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 MessageBox.Show(strings.MsgBox_Error_ReadConfigFile1, strings.MsgBox_Error_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -140,13 +140,13 @@ namespace Taskkiller
         private void SaveConfig()
         {
             //Write everything into local vars
-            this.TimeList = configForm.TimeList;
-            this.TrollMode = configForm.TrollMode.Checked;
-            this.HideIcon = configForm.checkBoxHideIcon.Checked;
-            this.LanguageMode = configForm.LanguageBox.SelectedIndex;
+            TimeList = configForm.TimeList;
+            TrollMode = configForm.TrollMode.Checked;
+            HideIcon = configForm.checkBoxHideIcon.Checked;
+            LanguageMode = configForm.LanguageBox.SelectedIndex;
             //Clear everything up to prevent double items
-            this.ProcessNames.Clear();
-            this.KillCompletely.Clear();
+            ProcessNames.Clear();
+            KillCompletely.Clear();
             foreach (string s in configForm.ProcessList.Items)
             {
                 ProcessNames.Add(s);
@@ -242,10 +242,10 @@ namespace Taskkiller
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(Lang);
             }
-            if (this.isInitialized)
+            if (isInitialized)
             {
-                this.exitToolStripMenuItem.Text = strings.String_Exit;
-                this.configToolStripMenuItem.Text = strings.String_Config;
+                exitToolStripMenuItem.Text = strings.String_Exit;
+                configToolStripMenuItem.Text = strings.String_Config;
             }
             if (configForm != null)
             {
@@ -272,7 +272,7 @@ namespace Taskkiller
         {
             KillAllThreads();
             //dispose the icon to update the taskbar
-            this.TaskkillerIcon.Dispose();
+            TaskkillerIcon.Dispose();
             //Close Form
             if (configForm != null)
             {

@@ -334,6 +334,8 @@
             // 
             this.LanguageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.LanguageBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.LanguageBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.LanguageBox.FormattingEnabled = true;
             this.LanguageBox.Items.AddRange(new object[] {
             "Automatic Language",

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Taskkiller
 {
@@ -14,33 +14,37 @@ namespace Taskkiller
         {
             InitializeComponent();
             //LanguageBox.SelectedIndex = 0;
+            if (LanguageBox.Items.Count < 6)
+            {
+                LanguageBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
             UpdateLanguage();
             if (TaskkillerMain.firstStart)
             {
                 //Disable Abort actions when first start
                 buttonAbort.Enabled = false;
                 abortToolStripMenuItem.Enabled = false;
-                this.LanguageBox.SelectedIndex = 0;
+                LanguageBox.SelectedIndex = 0;
             }
             else
             {
                 //else read configuration
-                this.TimeList = Taskkiller.Program.MainContext.TimeList;
+                TimeList = Taskkiller.Program.MainContext.TimeList;
                 foreach (string s in Taskkiller.Program.MainContext.ProcessNames)
                 {
                     ProcessList.Items.Add(s);
                     if (Taskkiller.Program.MainContext.KillCompletely[ProcessList.Items.Count - 1])
                     {
-                        this.ProcessList.SetItemChecked(this.ProcessList.Items.Count - 1, true);
+                        ProcessList.SetItemChecked(ProcessList.Items.Count - 1, true);
                     }
                     else
                     {
-                        this.ProcessList.SetItemChecked(this.ProcessList.Items.Count - 1, false);
+                        ProcessList.SetItemChecked(ProcessList.Items.Count - 1, false);
                     }
                 }
-                this.TrollMode.Checked = Taskkiller.Program.MainContext.TrollMode;
-                this.checkBoxHideIcon.Checked = Taskkiller.Program.MainContext.HideIcon;
-                this.LanguageBox.SelectedIndex = Taskkiller.Program.MainContext.LanguageMode;
+                TrollMode.Checked = Taskkiller.Program.MainContext.TrollMode;
+                checkBoxHideIcon.Checked = Taskkiller.Program.MainContext.HideIcon;
+                LanguageBox.SelectedIndex = Taskkiller.Program.MainContext.LanguageMode;
                 if (ProcessList.Items.Count > 0)
                 {
                     buttonSave.Enabled = true;
@@ -51,31 +55,31 @@ namespace Taskkiller
 
         public void UpdateLanguage()
         {
-            this.Program.Text = strings.String_Program;
-            this.programToolStripMenuItem.Text = strings.String_Program;
-            this.exitToolStripMenuItem.Text = strings.String_Exit;
-            this.configurationToolStripMenuItem.Text = strings.String_Configuration;
-            this.saveToolStripMenuItem.Text = strings.String_Save;
-            this.abortToolStripMenuItem.Text = strings.String_Abort;
-            this.buttonSave.Text = strings.String_Save;
-            this.buttonAbort.Text = strings.String_Abort;
-            this.groupBox1.Text = strings.String_AddEdit;
-            this.label3.Text = strings.String_EndAfter;
-            this.buttonAdd.Text = strings.String_AddEdit;
-            this.KillProcess.Text = strings.String_KillCompletely;
-            this.label1.Text = strings.String_Process;
-            this.Remove.Text = strings.String_Remove;
-            this.buttonRemove.Text = strings.String_Remove;
-            this.label2.Text = strings.String_SelectRemove;
-            this.groupBox2.Text = strings.String_AddedProcesses;
-            this.groupBox3.Text = strings.String_Other;
-            this.groupBox4.Text = strings.String_XMLOptions;
-            this.buttonResetXML.Text = strings.String_DeleteData;
-            this.buttonShow.Text = strings.String_ShowInExplorer;
-            this.label5.Text = strings.String_ChooseLang;
-            this.Text = strings.String_Title;
-            this.checkBoxHideIcon.Text = strings.String_HideIcon;
-            this.LanguageBox.Items[0] = strings.String_AutoLang;
+            Program.Text = strings.String_Program;
+            programToolStripMenuItem.Text = strings.String_Program;
+            exitToolStripMenuItem.Text = strings.String_Exit;
+            configurationToolStripMenuItem.Text = strings.String_Configuration;
+            saveToolStripMenuItem.Text = strings.String_Save;
+            abortToolStripMenuItem.Text = strings.String_Abort;
+            buttonSave.Text = strings.String_Save;
+            buttonAbort.Text = strings.String_Abort;
+            groupBox1.Text = strings.String_AddEdit;
+            label3.Text = strings.String_EndAfter;
+            buttonAdd.Text = strings.String_AddEdit;
+            KillProcess.Text = strings.String_KillCompletely;
+            label1.Text = strings.String_Process;
+            Remove.Text = strings.String_Remove;
+            buttonRemove.Text = strings.String_Remove;
+            label2.Text = strings.String_SelectRemove;
+            groupBox2.Text = strings.String_AddedProcesses;
+            groupBox3.Text = strings.String_Other;
+            groupBox4.Text = strings.String_XMLOptions;
+            buttonResetXML.Text = strings.String_DeleteData;
+            buttonShow.Text = strings.String_ShowInExplorer;
+            label5.Text = strings.String_ChooseLang;
+            Text = strings.String_Title;
+            checkBoxHideIcon.Text = strings.String_HideIcon;
+            LanguageBox.Items[0] = strings.String_AutoLang;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,8 +95,8 @@ namespace Taskkiller
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
@@ -107,8 +111,8 @@ namespace Taskkiller
 
         private void SaveConfig()
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void Abort()
@@ -117,8 +121,8 @@ namespace Taskkiller
             {
                return;
             }
-            this.DialogResult = DialogResult.Abort;
-            this.Close();
+            DialogResult = DialogResult.Abort;
+            Close();
         }
 
         private void ProcessName_TextChanged(object sender, EventArgs e)
@@ -146,11 +150,11 @@ namespace Taskkiller
                 int index = ProcessList.Items.IndexOf(ProcessName.Text);
                 if (KillProcess.Checked)
                 {
-                    this.ProcessList.SetItemChecked(index, true);
+                    ProcessList.SetItemChecked(index, true);
                 }
                 else
                 {
-                    this.ProcessList.SetItemChecked(index, false);
+                    ProcessList.SetItemChecked(index, false);
                 }
                 //(int)Time.Value never over 100. This Method works better.
                 TimeList[index] = int.Parse(Time.Value.ToString());
@@ -160,11 +164,11 @@ namespace Taskkiller
             TimeList.Add(int.Parse(Time.Value.ToString()));
             if (KillProcess.Checked)
             {
-                this.ProcessList.SetItemChecked(this.ProcessList.Items.Count - 1, true);
+                ProcessList.SetItemChecked(ProcessList.Items.Count - 1, true);
             }
             else
             {
-                this.ProcessList.SetItemChecked(this.ProcessList.Items.Count - 1, false);
+                ProcessList.SetItemChecked(ProcessList.Items.Count - 1, false);
             }
             buttonSave.Enabled = true;
             saveToolStripMenuItem.Enabled = true;
@@ -174,8 +178,8 @@ namespace Taskkiller
 
         private void RemoveProcess()
         {
-            this.TimeList.RemoveAt(ProcessList.SelectedIndex);
-            this.ProcessList.Items.Remove(ProcessList.SelectedItem);
+            TimeList.RemoveAt(ProcessList.SelectedIndex);
+            ProcessList.Items.Remove(ProcessList.SelectedItem);
             if (ProcessList.Items.Count < 1)
             {
                 buttonRemove.Enabled = false;
@@ -190,7 +194,7 @@ namespace Taskkiller
 
         private void ProcessList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.ProcessList.SelectedIndex < 0)
+            if (ProcessList.SelectedIndex < 0)
             {
                 buttonRemove.Enabled = false;
             }
@@ -273,12 +277,12 @@ namespace Taskkiller
 
         private void LanguageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (LastIndex == this.LanguageBox.SelectedIndex)
+            if (LastIndex == LanguageBox.SelectedIndex)
             {
                 return;
             }
-            LastIndex = this.LanguageBox.SelectedIndex;
-            switch (this.LanguageBox.SelectedIndex)
+            LastIndex = LanguageBox.SelectedIndex;
+            switch (LanguageBox.SelectedIndex)
             {
                 case 0:
                     {
@@ -313,13 +317,14 @@ namespace Taskkiller
                     {
                         //Just to prevent crashes on exit
                         DialogResult = DialogResult.OK;
-                        this.Close();
-                        this.Dispose();
-                        var Process = new Process();
+                        Close();
+                        Dispose();
+                        Process Process = new Process();
                         Process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         Process.StartInfo.FileName = "cmd.exe";
                         //give cmd command: wait 1 second, delete noprompt, delete localization folder noprompt
-                        Process.StartInfo.Arguments = "/C ping 1.1.1.1 -n 1 -w 1000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\" & rmdir /S /Q \"" + Application.StartupPath + "\\de\"";
+                        //Process.StartInfo.Arguments = "/C ping 1.1.1.1 -n 1 -w 1000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\" & rmdir /S /Q \"" + Application.StartupPath + "\\de\""; <- No need to delete "de" folder, since satellite assemblys are embedded now
+                        Process.StartInfo.Arguments = "/C ping 1.1.1.1 -n 1 -w 1000 > Nul & del /F /Q \"" + Application.ExecutablePath + "\"";
                         Process.Start();
                         Taskkiller.Program.MainContext.ExitProgram();
                     }

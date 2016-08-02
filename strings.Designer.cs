@@ -330,7 +330,7 @@ namespace Taskkiller {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Automatic language ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Choose automatically ähnelt.
         /// </summary>
         internal static string String_AutoLang {
             get {

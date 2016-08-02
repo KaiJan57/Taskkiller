@@ -204,7 +204,7 @@ Taskkiller will exit now. More information: </value>
     <value>Added processes</value>
   </data>
   <data name="String_AutoLang" xml:space="preserve">
-    <value>Automatic language</value>
+    <value>Choose automatically</value>
   </data>
   <data name="String_ChooseLang" xml:space="preserve">
     <value>Choose language:</value>
