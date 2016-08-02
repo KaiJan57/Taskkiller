@@ -339,7 +339,7 @@ namespace Taskkiller {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Choose language: ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Language: ähnelt.
         /// </summary>
         internal static string String_ChooseLang {
             get {
@@ -402,7 +402,7 @@ namespace Taskkiller {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Hide Icon in Taskbar ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hide icon in Taskbar ähnelt.
         /// </summary>
         internal static string String_HideIcon {
             get {
@@ -411,7 +411,7 @@ namespace Taskkiller {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Kill process completely ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kill process immediately ähnelt.
         /// </summary>
         internal static string String_KillCompletely {
             get {

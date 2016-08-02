@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MsgBox_ConfigDelete_Text" xml:space="preserve">
     <value>The datafolder with the configuration of Taskkiller will be DELETED!
@@ -207,7 +207,7 @@ Taskkiller will exit now. More information: </value>
     <value>Choose automatically</value>
   </data>
   <data name="String_ChooseLang" xml:space="preserve">
-    <value>Choose language:</value>
+    <value>Language:</value>
   </data>
   <data name="String_Config" xml:space="preserve">
     <value>Configure</value>
@@ -225,7 +225,7 @@ Taskkiller will exit now. More information: </value>
     <value>Exit</value>
   </data>
   <data name="String_KillCompletely" xml:space="preserve">
-    <value>Kill process completely</value>
+    <value>Kill process immediately</value>
   </data>
   <data name="String_Other" xml:space="preserve">
     <value>Other</value>
@@ -267,6 +267,6 @@ Taskkiller will exit now. More information: </value>
     <value>Hi, I'm here now!</value>
   </data>
   <data name="String_HideIcon" xml:space="preserve">
-    <value>Hide Icon in Taskbar</value>
+    <value>Hide icon in Taskbar</value>
   </data>
 </root>

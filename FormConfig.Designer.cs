@@ -76,18 +76,21 @@
             this.Program.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Program.Size = new System.Drawing.Size(531, 24);
             this.Program.TabIndex = 0;
+            this.Program.Text = "Program";
             // 
             // programToolStripMenuItem
             // 
             this.programToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.programToolStripMenuItem.Name = "programToolStripMenuItem";
-            this.programToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            this.programToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.programToolStripMenuItem.Text = "Program";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // configurationToolStripMenuItem
@@ -96,19 +99,22 @@
             this.saveToolStripMenuItem,
             this.abortToolStripMenuItem});
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // abortToolStripMenuItem
             // 
             this.abortToolStripMenuItem.Name = "abortToolStripMenuItem";
-            this.abortToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
+            this.abortToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.abortToolStripMenuItem.Text = "Abort";
             this.abortToolStripMenuItem.Click += new System.EventHandler(this.abortToolStripMenuItem_Click);
             // 
             // buttonSave
@@ -119,6 +125,7 @@
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 1;
+            this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -130,6 +137,7 @@
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(75, 23);
             this.buttonAbort.TabIndex = 2;
+            this.buttonAbort.Text = "Abort";
             this.buttonAbort.UseVisualStyleBackColor = true;
             this.buttonAbort.Click += new System.EventHandler(this.buttonAbort_Click);
             // 
@@ -149,6 +157,7 @@
             this.groupBox1.Size = new System.Drawing.Size(310, 118);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add/Edit";
             // 
             // label4
             // 
@@ -179,8 +188,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(7, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 4;
+            this.label3.Text = "End it after:";
             // 
             // buttonAdd
             // 
@@ -191,6 +201,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(294, 23);
             this.buttonAdd.TabIndex = 3;
+            this.buttonAdd.Text = "Add/Edit";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -200,10 +211,11 @@
             this.KillProcess.AutoSize = true;
             this.KillProcess.Checked = true;
             this.KillProcess.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.KillProcess.Location = new System.Drawing.Point(10, 68);
+            this.KillProcess.Location = new System.Drawing.Point(10, 65);
             this.KillProcess.Name = "KillProcess";
-            this.KillProcess.Size = new System.Drawing.Size(15, 14);
+            this.KillProcess.Size = new System.Drawing.Size(136, 17);
             this.KillProcess.TabIndex = 2;
+            this.KillProcess.Text = "Kill process immediately";
             this.KillProcess.UseVisualStyleBackColor = true;
             // 
             // ProcessName
@@ -227,8 +239,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 0;
+            this.label1.Text = "Process:";
             // 
             // Remove
             // 
@@ -240,6 +253,7 @@
             this.Remove.Size = new System.Drawing.Size(195, 118);
             this.Remove.TabIndex = 4;
             this.Remove.TabStop = false;
+            this.Remove.Text = "Remove";
             // 
             // buttonRemove
             // 
@@ -250,6 +264,7 @@
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(183, 23);
             this.buttonRemove.TabIndex = 1;
+            this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
@@ -262,6 +277,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 70);
             this.label2.TabIndex = 0;
+            this.label2.Text = "Select a cell and press \"Remove\"";
             // 
             // groupBox2
             // 
@@ -275,6 +291,7 @@
             this.groupBox2.Size = new System.Drawing.Size(310, 117);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Added processes";
             // 
             // ProcessList
             // 
@@ -308,8 +325,9 @@
             this.checkBoxHideIcon.AutoSize = true;
             this.checkBoxHideIcon.Location = new System.Drawing.Point(6, 37);
             this.checkBoxHideIcon.Name = "checkBoxHideIcon";
-            this.checkBoxHideIcon.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxHideIcon.Size = new System.Drawing.Size(124, 17);
             this.checkBoxHideIcon.TabIndex = 3;
+            this.checkBoxHideIcon.Text = "Hide icon in Taskbar";
             this.checkBoxHideIcon.UseVisualStyleBackColor = true;
             // 
             // TrollMode
@@ -325,10 +343,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 15);
+            this.label5.Location = new System.Drawing.Point(136, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 2;
+            this.label5.Text = "Language:";
             // 
             // LanguageBox
             // 
@@ -367,6 +386,7 @@
             this.buttonResetXML.Name = "buttonResetXML";
             this.buttonResetXML.Size = new System.Drawing.Size(183, 23);
             this.buttonResetXML.TabIndex = 1;
+            this.buttonResetXML.Text = "Delete datafolder";
             this.buttonResetXML.UseVisualStyleBackColor = true;
             this.buttonResetXML.Click += new System.EventHandler(this.buttonResetXML_Click);
             // 
@@ -378,6 +398,7 @@
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(183, 23);
             this.buttonShow.TabIndex = 0;
+            this.buttonShow.Text = "Show file in Explorer";
             this.buttonShow.UseVisualStyleBackColor = true;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
@@ -400,6 +421,7 @@
             this.MainMenuStrip = this.Program;
             this.MinimumSize = new System.Drawing.Size(547, 350);
             this.Name = "FormConfig";
+            this.Text = "Taskkiller";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConfig_FormClosing);
             this.Program.ResumeLayout(false);
             this.Program.PerformLayout();

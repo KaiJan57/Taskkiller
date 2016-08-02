@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MsgBox_ConfigDelete_Text" xml:space="preserve">
     <value>Der Datenordner mit der Konfiguration von Taskkiller wird GELÖSCHT!
@@ -205,7 +205,7 @@ Taskkiller wird nun beendet. Genauere Informationen: </value>
     <value>Automatisch auswählen</value>
   </data>
   <data name="String_ChooseLang" xml:space="preserve">
-    <value>Sprache auswählen:</value>
+    <value>Sprache:</value>
   </data>
   <data name="String_Config" xml:space="preserve">
     <value>Konfigurieren</value>
@@ -223,7 +223,7 @@ Taskkiller wird nun beendet. Genauere Informationen: </value>
     <value>Beenden</value>
   </data>
   <data name="String_KillCompletely" xml:space="preserve">
-    <value>Prozess komplett beenden</value>
+    <value>Prozess sofort beenden</value>
   </data>
   <data name="String_Other" xml:space="preserve">
     <value>Sonstiges</value>
