@@ -74,7 +74,7 @@
             this.Program.Location = new System.Drawing.Point(0, 0);
             this.Program.Name = "Program";
             this.Program.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Program.Size = new System.Drawing.Size(518, 24);
+            this.Program.Size = new System.Drawing.Size(531, 24);
             this.Program.TabIndex = 0;
             // 
             // programToolStripMenuItem
@@ -115,7 +115,7 @@
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(431, 315);
+            this.buttonSave.Location = new System.Drawing.Point(444, 315);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 1;
@@ -126,7 +126,7 @@
             // 
             this.buttonAbort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAbort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonAbort.Location = new System.Drawing.Point(350, 315);
+            this.buttonAbort.Location = new System.Drawing.Point(363, 315);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(75, 23);
             this.buttonAbort.TabIndex = 2;
@@ -146,7 +146,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 118);
+            this.groupBox1.Size = new System.Drawing.Size(310, 118);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -154,7 +154,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(271, 41);
+            this.label4.Location = new System.Drawing.Point(284, 41);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 13);
             this.label4.TabIndex = 6;
@@ -171,7 +171,7 @@
             0,
             0});
             this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(164, 20);
+            this.Time.Size = new System.Drawing.Size(177, 20);
             this.Time.TabIndex = 5;
             // 
             // label3
@@ -189,7 +189,7 @@
             this.buttonAdd.Enabled = false;
             this.buttonAdd.Location = new System.Drawing.Point(10, 88);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(281, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(294, 23);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -215,7 +215,7 @@
             this.ProcessName.Multiline = false;
             this.ProcessName.Name = "ProcessName";
             this.ProcessName.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.ProcessName.Size = new System.Drawing.Size(230, 16);
+            this.ProcessName.Size = new System.Drawing.Size(243, 16);
             this.ProcessName.TabIndex = 1;
             this.ProcessName.Text = ".exe";
             this.ProcessName.SelectionChanged += new System.EventHandler(this.ProcessName_SelectionChanged);
@@ -235,7 +235,7 @@
             this.Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Remove.Controls.Add(this.buttonRemove);
             this.Remove.Controls.Add(this.label2);
-            this.Remove.Location = new System.Drawing.Point(316, 28);
+            this.Remove.Location = new System.Drawing.Point(329, 28);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(195, 118);
             this.Remove.TabIndex = 4;
@@ -272,7 +272,7 @@
             this.groupBox2.Location = new System.Drawing.Point(13, 152);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(297, 117);
+            this.groupBox2.Size = new System.Drawing.Size(310, 117);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
@@ -284,7 +284,7 @@
             this.ProcessList.FormattingEnabled = true;
             this.ProcessList.Location = new System.Drawing.Point(6, 19);
             this.ProcessList.Name = "ProcessList";
-            this.ProcessList.Size = new System.Drawing.Size(285, 79);
+            this.ProcessList.Size = new System.Drawing.Size(298, 94);
             this.ProcessList.TabIndex = 0;
             this.ProcessList.SelectedIndexChanged += new System.EventHandler(this.ProcessList_SelectedIndexChanged);
             this.ProcessList.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ProcessList_KeyUp);
@@ -299,7 +299,7 @@
             this.groupBox3.Controls.Add(this.LanguageBox);
             this.groupBox3.Location = new System.Drawing.Point(12, 275);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(332, 63);
+            this.groupBox3.Size = new System.Drawing.Size(345, 63);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             // 
@@ -338,12 +338,12 @@
             this.LanguageBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.LanguageBox.FormattingEnabled = true;
             this.LanguageBox.Items.AddRange(new object[] {
-            "Automatic Language",
+            "Choose automatically",
             "English",
             "Deutsch"});
             this.LanguageBox.Location = new System.Drawing.Point(200, 12);
             this.LanguageBox.Name = "LanguageBox";
-            this.LanguageBox.Size = new System.Drawing.Size(126, 21);
+            this.LanguageBox.Size = new System.Drawing.Size(139, 21);
             this.LanguageBox.TabIndex = 1;
             this.LanguageBox.SelectedIndexChanged += new System.EventHandler(this.LanguageBox_SelectedIndexChanged);
             // 
@@ -353,7 +353,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.buttonResetXML);
             this.groupBox4.Controls.Add(this.buttonShow);
-            this.groupBox4.Location = new System.Drawing.Point(316, 152);
+            this.groupBox4.Location = new System.Drawing.Point(329, 152);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(195, 117);
             this.groupBox4.TabIndex = 7;
@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonAbort;
-            this.ClientSize = new System.Drawing.Size(518, 350);
+            this.ClientSize = new System.Drawing.Size(531, 350);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -398,7 +398,7 @@
             this.Controls.Add(this.Program);
             this.Icon = global::Taskkiller.Properties.Resources.Appico;
             this.MainMenuStrip = this.Program;
-            this.MinimumSize = new System.Drawing.Size(534, 330);
+            this.MinimumSize = new System.Drawing.Size(547, 350);
             this.Name = "FormConfig";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormConfig_FormClosing);
             this.Program.ResumeLayout(false);
